@@ -18,3 +18,11 @@ Route::get('/contact/{id}', 'ContactsController@details');
 Route::get('/contact/{id}/edit', 'ContactsController@editView');
 Route::post('/contact/{id}/edit', 'ContactsController@edit');
 Route::get('/contact/{id}/delete', 'ContactsController@delete');
+
+Route::get('/contact/{contact_id}/add_phone', 'PhonesController@addForm');
+Route::post('/contact/{contact_id}/add_phone', 'PhonesController@add');
+Route::get('/phone/{id}/delete', 'PhonesController@delete');
+
+Route::get('/contact/{contact_id}/add_website', 'WebsiteController@addForm');
+Route::post('/contact/{contact_id}/add_website', 'WebsiteController@add');
+Route::get('/website/{id}/delete', 'WebsiteController@delete');
